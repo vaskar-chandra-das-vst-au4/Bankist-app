@@ -55,12 +55,12 @@ const account3 = {
   pin: 3333,
 
   movementsDates: [
-    '2010-11-01T13:15:33.035Z',
+    '2021-11-01T13:15:33.035Z',
     '2021-11-30T09:48:16.867Z',
     '2021-12-25T06:04:23.907Z',
     '2022-01-25T14:18:46.235Z',
     '2022-02-05T16:33:06.386Z',
-    '2020-04-10T14:43:26.374Z',
+    '2022-04-10T14:43:26.374Z',
     '2022-06-18T18:49:59.371Z',
     '2022-06-22T12:01:20.894Z',
   ],
@@ -178,7 +178,7 @@ const formatCur = function (value, currency, locale) {
 
 const startLogOutTimer = function () {
   //@ Total session time...
-  let time = 600;
+  let time = 900;
   //@ The CALLBACK FUNCTION FOR setIntercal
   const trick = function () {
     let min = String(Math.trunc(time / 60)).padStart(2, 0);
@@ -328,9 +328,9 @@ btnLogin.addEventListener('click', function (e) {
 
   if (currentAccount?.pin === +inputLoginPin.value) {
     // Display UI and message
-    labelWelcome.textContent = `Welcome back, ${
-      currentAccount.owner.split(' ')[0]
-    }`;
+    labelWelcome.textContent = `Welcome back, ${currentAccount.owner
+      .split(' ')
+      .join(' ')}`;
     containerApp.style.opacity = 100;
 
     //@Clear transfer section data
