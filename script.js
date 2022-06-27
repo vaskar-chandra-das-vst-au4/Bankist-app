@@ -50,7 +50,7 @@ const account2 = {
 };
 const account3 = {
   owner: 'Binita Tarafdar',
-  movements: [500, 3400, 1500, -790, -3210, 121000, 8500, -30],
+  movements: [500500, 342400, 352500, -790, -3210, 121000, 8500, -30],
   interestRate: 1.5,
   pin: 3333,
 
