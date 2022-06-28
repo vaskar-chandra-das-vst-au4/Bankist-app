@@ -50,7 +50,7 @@ const account2 = {
 };
 const account3 = {
   owner: 'Binita Tarafdar',
-  movements: [500500, 342400, 352500, -790, -3210, 121000, 8500, -30],
+  movements: [500, 3400, 1500, -790, -3210, 121000, 8500, -30],
   interestRate: 1.5,
   pin: 3333,
 
@@ -105,8 +105,27 @@ const account5 = {
   currency: 'INR',
   locale: 'en-IN',
 };
+const account6 = {
+  owner: 'Sisu Panda',
+  movements: [566500, 453400, 122150, 197190, 9453210, -51000, 18500, -310],
+  interestRate: 1.5,
+  pin: 6666,
 
-const accounts = [account1, account2, account3, account4, account5];
+  movementsDates: [
+    '2021-11-01T13:15:33.035Z',
+    '2021-11-30T09:48:16.867Z',
+    '2021-12-25T06:04:23.907Z',
+    '2021-01-25T14:18:46.235Z',
+    '2022-02-05T16:33:06.386Z',
+    '2022-04-10T14:43:26.374Z',
+    '2022-06-25T18:49:59.371Z',
+    '2022-06-27T12:01:20.894Z',
+  ],
+  currency: 'INR',
+  locale: 'en-IN',
+};
+
+const accounts = [account1, account2, account3, account4, account5, account6];
 
 /////////////////////////////////////////////////
 
@@ -127,6 +146,7 @@ const btnTransfer = document.querySelector('.form__btn--transfer');
 const btnLoan = document.querySelector('.form__btn--loan');
 const btnClose = document.querySelector('.form__btn--close');
 const btnSort = document.querySelector('.btn--sort');
+const btnLogout = document.querySelector('.btn-logout');
 
 const inputLoginUsername = document.querySelector('.login__input--user');
 const inputLoginPin = document.querySelector('.login__input--pin');
@@ -456,7 +476,12 @@ btnSort.addEventListener('click', function (e) {
   displayMovements(currentAccount, !sorted);
   sorted = !sorted;
 });
-
+//! Logout Feature...
+btnLogout.addEventListener('click', function () {
+  clearInterval(timerCheck);
+  containerApp.style.opacity = 0;
+  labelWelcome.textContent = `Log in to get started`;
+});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 //! LECTURES

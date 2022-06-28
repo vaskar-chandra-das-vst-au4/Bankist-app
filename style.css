@@ -286,12 +286,17 @@ h2 {
 }
 
 .logout-timer {
-  padding: 0 0.3rem;
-  margin-top: 1.9rem;
   text-align: right;
   font-size: 1.25rem;
+  padding-top: 1.3rem;
 }
 
 .timer {
   font-weight: 600;
+}
+.btn-logout {
+  font-size: 1.25rem;
+  padding: 6px 10px;
+  font-weight: 600;
+  margin-right: 10px;
 }
